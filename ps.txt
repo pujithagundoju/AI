@@ -1,0 +1,45 @@
+Problem Statement 1: Smart Resume Screening System
+In today’s digital recruitment process, organizations receive a large number of resumes for
+various job roles such as Data Science, Web Development, Human Resources, and more.
+Manually screening these resumes is time-consuming, inefficient, and prone to human bias.
+The objective of this project is to design and implement a Smart Resume Screening System
+that can automatically:
+1. Classify resumes into appropriate job categories based on their textual content.
+2. Match resumes with a given job description and rank them according to relevance.
+
+This project simulates a real-world Applicant Tracking System (ATS) used by companies to
+streamline hiring.
+Dataset:
+You are provided with 24-class resume classification dataset extracted from PDF files.
+Structure:
+● Train.csv: 1986 rows (Use this to train your models)
+● Test.csv: 497 rows (Use this to evaluate your models)
+Columns:
+● Text: Textual data extracted from resumes
+● Label: Target label (Resume class e.g., HR, Banking, Accountant, etc,.)
+
+Steps to Build the Models:
+Step 1: Data Loading and Exploration
+● Load the dataset using Pandas.
+● Display a few samples from the dataset.
+● Analyze the data distribution over classes.
+
+Step 2: Feature Extraction
+
+● Take the extracted text column from your dataset
+● Apply a vectorization technique to convert text into numbers
+● Use the transformed data as input for your model
+Vectorization technique:
+TF-IDF Vectorization : It converts text into a matrix of word frequencies, penalising
+words that appear too often across all texts (like "the" or "and").
+How the input works here:
+● Input Text: "The quick brown fox"
+● Vectorized Input: [0.0, 0.12, 0.0, 0.85, ...] (A sparse array where
+each index represents a specific word in your vocabulary).
+
+By completing this project, you will learn how to:
+1. Handle and process textual datasets.
+2. Convert raw text into numerical representations (Tokenization and Vectorization).
+3. Design, train, and evaluate both traditional machine learning and deep learning models.
+4. Compare model architectures based on performance, training time, and computational
+cost.
