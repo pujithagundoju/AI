@@ -6,6 +6,8 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import LinearSVC
 from sklearn.naive_bayes import MultinomialNB
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.ensemble import GradientBoostingClassifier
 from sklearn.metrics import accuracy_score, precision_recall_fscore_support
 
 class ModelFactory:
@@ -18,7 +20,9 @@ class ModelFactory:
             'lr': LogisticRegression(max_iter=1000, random_state=42),
             'rf': RandomForestClassifier(n_estimators=100, random_state=42),
             'svm': LinearSVC(random_state=42, dual='auto'),
-            'nb': MultinomialNB()
+            'nb': MultinomialNB(),
+            'knn': KNeighborsClassifier(n_neighbors=5, metric='cosine'),
+            'gb': GradientBoostingClassifier(n_estimators=50, random_state=42)
         }
         if model_name.lower() not in models:
             raise ValueError(f"Model {model_name} not supported. Options: {list(models.keys())}")

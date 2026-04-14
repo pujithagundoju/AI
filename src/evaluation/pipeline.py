@@ -59,7 +59,7 @@ def main():
     # 4. Modeling (Traditional ML)
     print("\n4. Modeling...")
     results = []
-    models_to_run = ['nb', 'lr', 'rf', 'svm']
+    models_to_run = ['nb', 'knn', 'lr', 'svm', 'rf', 'gb']
     
     for m in models_to_run:
         print(f" -> Training {m.upper()}...")
